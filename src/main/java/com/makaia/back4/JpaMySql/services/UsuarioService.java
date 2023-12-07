@@ -59,11 +59,7 @@ public class UsuarioService {
         return responseEntity.getBody();
     }
 
-    private boolean isEmpty(String valor) {
-        return valor == null || valor.isEmpty();
-    }
-
-
+    
     public List<Usuario> listar() {
         return StreamSupport
                 .stream(this.repository.findAll().spliterator(), false)
